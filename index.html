@@ -2,32 +2,47 @@
 <html lang="en" class="h-full">
   <head>
     <meta charset="UTF-8" />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Component Revision</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/site.webmanifest" />
+    <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="h-full grid place-items-center">
-    <div id="app">
-      <app-button>Submit</app-button>
+    <div id="app" class="place-items-center items-center">
+      <img src="./img/logo.png" alt="logo" />
+      <div class="flex flex-col justify-center">
+        <app-button>Submit</app-button>
+      </div>
     </div>
   </body>
-  <script>
+  <script type="module">
+    import AppButton from "./js/components/AppButton.js";
     let app = {
       components: {
-        "app-button": {
-          template: `
-            <button class="bg-gray-200 hover:bg-gray-400 border rounded px-5 py-2 disabled:cursor-not-allowed" :disabled="processing">
-                <slot />
-            </button>
-        `,
-          data() {
-            return {
-              processing: true,
-            };
-          },
-        },
+        "app-button": AppButton,
       },
     };
 
