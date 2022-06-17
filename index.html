@@ -29,11 +29,43 @@
     <meta name="theme-color" content="#ffffff" />
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="h-full grid place-items-center">
-    <div id="app" class="place-items-center items-center">
-      <img src="./img/logo.png" alt="logo" />
-      <div class="flex flex-col justify-center">
+    <div class="items-center mt-20">
+      <svg
+        class="logo float-left"
+        viewBox="0 0 128 128"
+        width="60"
+        height="60"
+        data-v-596b9dc5=""
+      >
+        <path
+          fill="#42b883"
+          d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"
+          data-v-596b9dc5=""
+        ></path>
+        <path
+          fill="#35495e"
+          d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z"
+          data-v-596b9dc5=""
+        ></path>
+      </svg>
+      <h1
+        class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold float-left"
+      >
+        &nbsp; Vue.js <span class="accent">Starter</span> Application
+      </h1>
+    </div>
+    <div id="app" class="place-items-center">
+      <img class="float-none" src="./img/logo.png" alt="logo" />
+      <div class="flex justify-center button-container">
         <app-button>Submit</app-button>
       </div>
     </div>

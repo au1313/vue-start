@@ -1,0 +1,30 @@
+h1{
+    color:rgb(33, 53, 71);
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+.accent{
+    background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+    background-image: -webkit-linear-gradient(315deg, rgb(66, 211, 146) 25%, rgb(100, 126, 255));
+    background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-color: initial;
+        background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+}
+
+.button-container{
+    width: 256px;
+}
+
+#app{
+    width: 256px;
+    height: 700px;}
