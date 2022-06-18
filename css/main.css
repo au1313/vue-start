@@ -28,3 +28,29 @@ h1{
 #app{
     width: 256px;
     height: 700px;}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.is-loading:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #435466;
+    border-top-color: #ffffff;
+    animation: spinner .6s linear infinite;
+}
+
+.is-loading{
+    color:transparent !important;
+}
