@@ -4,7 +4,11 @@ h1{
 }
 
 
-
+input.form-check-input::before{
+    position:relative;
+    bottom:6px;
+    left:.5px;
+}
 .accent{
     background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
     background-image: -webkit-linear-gradient(315deg, rgb(66, 211, 146) 25%, rgb(100, 126, 255));
