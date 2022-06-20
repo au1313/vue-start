@@ -7,11 +7,12 @@ body{
     color:#ffffff;
 }
 
-
+input.add-assignment{
+    width: 67%;
+}
 input.form-check-input::before{
     position:relative;
     bottom:6px;
-    left:.5px;
 }
 
 .bevel{
