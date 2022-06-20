@@ -3,6 +3,11 @@ h1{
     font-family: 'Inter', sans-serif;
 }
 
+h2 {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
 body{
     background-repeat: no-repeat;
     background-size: cover !important;
@@ -20,9 +25,7 @@ body{
         filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#5E86C2", endColorstr="#42B883", GradientType=1);
 }
 
-input.add-assignment{
-    width: 67%;
-}
+
 input.form-check-input::before{
     position:relative;
     bottom:6px;

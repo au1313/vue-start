@@ -1,0 +1,32 @@
+{
+    "theme_color": "#42b883",
+    "background_color": "#42b883",
+    "display": "standalone",
+    "scope": "http://vue-start.test:3000/",
+    "start_url": "http://vue-start.test:3000/",
+    "name": "VueStart",
+    "short_name": "VueStart",
+    "description": "Practice VueJS App",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
