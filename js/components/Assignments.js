@@ -4,7 +4,7 @@ import AssignmentCreate from "./AssignmentCreate.js";
 export default {
     template: `
     <section class="space-y-10">
-        <assignment-create :assignments="assignments"></assignment-create>
+        <assignment-create @add="add"></assignment-create>
         <assignment-list :assignments="filters.inProgress" title="In Progress"></assignment-list>
         <assignment-list :assignments="filters.completed" title="Completed"></assignment-list>
     </section>
@@ -34,9 +34,9 @@ export default {
         }
       },
       methods: {
-        add(){
+        add(name){
             this.assignments.push({
-                name: this.newAssignment,
+                name: name,
                 completed: false,
                 id: this.assignments + 1,
             });

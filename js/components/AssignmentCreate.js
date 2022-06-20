@@ -12,9 +12,6 @@ export default{
     components: {
         AppButton
     },
-    props: {
-        assignments: Array
-    },
     data(){
         return{
             newAssignment: ''
@@ -22,12 +19,8 @@ export default{
     },
     methods: {
           add(){
-            this.assignments.push({
-                name: this.newAssignment,
-                completed: false,
-                id: this.assignments + 1,
-            });
-            this.newAssignment = '';
+            this.$emit('add',this.newAssignment);
+            this.newAssignment = ''; 
         }
     }
 }
