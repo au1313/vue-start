@@ -3,9 +3,9 @@ import AppButton from "./AppButton.js";
 export default {
     template: `
     <section class="space-y-6">
-        <form>
+        <form @submit.prevent="add">
             <div class="rounded bg-[#4fc08d] bevel hover:drop-shadow-lg p-3 ">
-                <input class="mr-1 add-assignment text-black shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline" placeholder="New Assignment" />
+                <input v-model="newAssignment" class="mr-1 add-assignment text-black shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline" placeholder="New Assignment" />
                 <app-button type="secondary" >Add</app-button>
             </div>
         </form>
@@ -24,6 +24,7 @@ export default {
             { name: "Another task", complete: false, id:2 },
             { name: "Something else", complete: false, id:3 },
           ],
+          newAssignment: ''
         }
       },
       computed: {
@@ -36,4 +37,15 @@ export default {
             }
         }
       },
+      methods: {
+        add(){
+            this.assignments.push({
+                name: this.newAssignment,
+                completed: false,
+                id: this.assignments + 1,
+            });
+            this.newAssignment = '';
+
+      }
+    }
 }

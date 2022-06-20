@@ -4,7 +4,20 @@ h1{
 }
 
 body{
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    min-height: 100% !important;
     color:#ffffff;
+    background: hsla(216, 45%, 56%, 1);
+    
+        background: linear-gradient(90deg, hsla(216, 45%, 56%, 1) 0%, hsla(153, 47%, 49%, 1));
+    
+        background: -moz-linear-gradient(90deg, hsla(216, 45%, 56%, 1) 0%, hsla(153, 47%, 49%, 1) );
+    
+        background: -webkit-linear-gradient(90deg, hsla(216, 45%, 56%, 1) 0%, hsla(153, 47%, 49%, 1));
+    
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#5E86C2", endColorstr="#42B883", GradientType=1);
 }
 
 input.add-assignment{
