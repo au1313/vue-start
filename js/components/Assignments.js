@@ -17,10 +17,11 @@ export default {
     data() {
         return {
           assignments: [
-            { name: "Finish Project", complete: false, id:1},
-            { name: "Another task", complete: false, id:2 },
-            { name: "Something else", complete: false, id:3 },
+            { name: "Finish Project", complete: false, id:1, tag:'Math'},
+            { name: "Another task", complete: false, id:2, tag: 'Science'},
+            { name: "Something else", complete: false, id:3, tag: 'Reading'},
           ],
+
         }
       },
       computed: {

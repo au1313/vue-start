@@ -4,9 +4,9 @@ export default {
                     type="submit"
                     :class="{
                         'rounded px-5 py-2  text-white font-bold drop-shadow-[0_10px_50px_#435466] disabled:cursor-not-allowed m-auto': true,
-                        'hover:bg-[#43a679] bg-[#4fc08d]': type === 'primary',
-                        'bg-[#35495e] hover:bg-[#293949]': type === 'secondary',
-                        'bg-gray-200 hover:bg-gray-400 text-black font-normal': type === 'muted',
+                        'hover:bg-[#43a679] bg-[#4fc08d] disabled:cursor-not-allowed': type === 'primary',
+                        'bg-[#35495e] hover:bg-[#293949]disabled:cursor-not-allowed': type === 'secondary',
+                        'bg-gray-200 hover:bg-gray-400 text-black font-normal disabled:cursor-not-allowed': type === 'muted',
                         'is-loading': processing
                     }" 
                     :disabled="processing"
