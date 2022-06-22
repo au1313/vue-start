@@ -6,14 +6,14 @@ export default{
     },
     template:`
         <div class="flex gap-2 mb-10 ml-[-30px]">
-            <app-button @click="$emit('change', tag)" :class="{
-                '!bg-[#4fc08d] bevel': tag === currentTag
+            <app-button @click="$emit('update:currentTag', tag)" :class="{
+                '!bg-[#4fc08d] bevel': tag === modelValue
             }" class="w-30 text-xs" v-for="tag in tags" type="secondary">{{tag}}</app-button>
         </div>
     `,
     props:{
         initialTags: Array,
-        currentTag: String
+        currentTag: String,
     },
 
     computed:{

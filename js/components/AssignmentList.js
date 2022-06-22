@@ -10,9 +10,8 @@ export default {
     template: `
     <section v-show="assignments.length">
         <assignment-tags 
+            v-model:currentTag="currentTag"
             :initial-tags="assignments.map(a => a.tag)"
-            :current-tag="currentTag"
-            @change="currentTag = $event"
         />
         <h2 class="font-bold mb-2 drop-shadow">
         {{ title }}
