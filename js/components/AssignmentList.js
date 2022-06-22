@@ -1,17 +1,19 @@
 import Assignment from "./Assignment.js"
 import AppButton from "./AppButton.js"
+import AssignmentTags from "./AssignmentTags.js"
 export default {
     components:{
         Assignment, 
-        AppButton
+        AppButton,
+        AssignmentTags
     },
     template: `
     <section v-show="assignments.length">
-        <div class="flex gap-2 mb-10">
-            <app-button @click="currentTag = tag" :class="{
-                '!bg-[#4fc08d] bevel': tag === currentTag
-            }" class="w-30 text-xs" v-for="tag in tags" type="secondary">{{tag}}</app-button>
-        </div>
+        <assignment-tags 
+            :initial-tags="assignments.map(a => a.tag)"
+            :current-tag="currentTag"
+            @change="currentTag = $event"
+        />
         <h2 class="font-bold mb-2 drop-shadow">
         {{ title }}
         <span>
@@ -39,9 +41,6 @@ export default {
         }
     },
     computed:{
-        tags() {
-            return ['All', ...new Set(this.assignments.map(a => a.tag))];
-        },
         filteredAssignments() {
             if(this.currentTag === 'All'){
                 return this.assignments;
